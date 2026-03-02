@@ -67,7 +67,7 @@ Manual prediction demo
 
 Outputs : 
 
-Confusion Matrix 
+Confusion Matrix
 
 Feature Importance
 
