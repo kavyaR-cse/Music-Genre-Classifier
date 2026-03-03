@@ -1,29 +1,34 @@
-🎵 Music Genre Classification using Random Forest
+🎵 End-to-End Music Genre Classification System
 
-Overview :
+📌 Overview:
 
-This project classifies songs into different music genres using a Random Forest machine learning model.
-The dataset contains audio features (like tempo, energy, etc.) for each song, and the model predicts the genre based on these features.
+This project implements a machine learning pipeline to classify music tracks into genres based on extracted audio features. The system leverages a Random Forest classifier to learn patterns from numerical audio descriptors and predict genre categories.
 
-This project demonstrates:
+The goal was to design a structured ML workflow including preprocessing, model training, evaluation, and feature interpretation.
 
--Data preprocessing
+🎯 Problem Statement:
 
--Model training and evaluation
+Automatically classifying music genres is challenging due to overlapping audio characteristics across categories. This project builds a supervised machine learning model capable of learning discriminative audio patterns and predicting genre labels accurately.
 
--Confusion matrix visualization
+🛠 Tech Stack:
 
--Feature importance analysis
+Python
 
--Manual prediction demo
+Pandas
 
-Dataset:
+scikit-learn
 
-Public dataset: [Wine dataset used as a proxy for music genres]
+Matplotlib
 
-Features include numeric values representing song characteristics
+Seaborn
 
-Target labels mapped to genres:
+📊 Dataset:
+
+Public dataset (Wine dataset used as proxy for structured genre features)
+
+Numerical feature vectors representing song characteristics
+
+Target labels mapped as:
 
 0 → Classical
 
@@ -31,60 +36,77 @@ Target labels mapped to genres:
 
 2 → Rock
 
-How It Works :
+⚙️ Approach:
 
-1.Load the dataset and map numeric labels to genre names.
+Data Preprocessing
 
-2.Split dataset into training and testing sets.
+Loaded dataset and mapped numeric labels to genre names
 
-3.Train a Random Forest classifier on the training data.
+Performed train-test split
 
-4.Evaluate the model using:
+Ensured clean structured feature inputs
 
--Accuracy
+Model Training
 
--Confusion matrix
+Implemented Random Forest classifier
 
--Analyze feature importance to see which features influence genre prediction the most.
+Trained model on structured feature data
 
--Predict the genre of a new song using the trained model.
+Optimized model parameters for better generalization
 
-Usage :  
+Model Evaluation
 
-Open the notebook source_code.ipynb in Google Colab or Jupyter Notebook.
+Measured accuracy on test dataset
 
-Run all cells from top to bottom.
+Generated confusion matrix to analyze misclassifications
 
-Check outputs:
+Evaluated model stability
 
-Accuracy score
+Feature Analysis
 
-Confusion matrix
+Computed feature importance scores
 
-Feature importance plot
+Identified key attributes influencing genre prediction
 
-Manual prediction demo
+Manual Prediction
 
-Outputs : 
+Demonstrated prediction on new input feature vector
 
-Confusion Matrix
+📈 Results:
 
-Feature Importance
+Achieved competitive classification accuracy on test dataset
 
-Manual Prediction Demo
+Confusion matrix revealed genre-level performance distribution
 
-Requirements : 
+Feature importance analysis highlighted dominant predictive features
 
-Python 3.x
+🚧 Challenges Faced : 
 
-Libraries: pandas, scikit-learn, matplotlib, seaborn
+Handling limited and structured proxy dataset
 
-Install them via:
+Avoiding overfitting with ensemble model
 
+Interpreting feature importance meaningfully
+
+Ensuring generalization to unseen data
+
+🚀 Future Improvements :
+
+Replace proxy dataset with real audio dataset (e.g., extracted MFCC features)
+
+Implement advanced feature extraction using Librosa
+
+Compare multiple models (SVM, Gradient Boosting, Neural Networks)
+
+Expose trained model via REST API for real-time predictions
+
+Deploy using Streamlit or Flask
+
+▶️ How to Run :
 pip install pandas scikit-learn matplotlib seaborn
 
-Conclusion:
+Open source_code.ipynb in Jupyter Notebook or Google Colab and run all cells sequentially.
 
-This project shows how machine learning can classify songs into genres based on audio features.
-It also demonstrates model evaluation, feature analysis, and manual prediction, making it a complete mini ML system.
+📌 Project Outcome
 
+This project demonstrates a complete machine learning workflow including data preprocessing, supervised model training, evaluation, interpretability, and manual prediction forming a structured foundation for scalable AI system development.
